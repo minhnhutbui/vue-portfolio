@@ -13,5 +13,5 @@ export default {
 </script>
 
 <style>
-@import "./App.css";
+@import "./assets/css/App.css";
 </style>
