@@ -14,4 +14,5 @@ export default {
 
 <style>
 @import "./assets/css/App.css";
+@import "./assets/css/grid.css";
 </style>
