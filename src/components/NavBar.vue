@@ -6,7 +6,12 @@
 		<div class="nav_right">
 			<div class="nav_right--items">
 				<ul>
-					<li v-for="item in items" :key="item.name">
+					<li
+						v-for="(item, index) in items"
+						:key="item.name"
+						:class="item.active ? 'active' : ''"
+						@click="setActive(index)"
+					>
 						<a href="#">{{ item.name }}</a>
 					</li>
 				</ul>
@@ -40,17 +45,28 @@ export default {
 		const items = ref(navbar.data.items);
 		const socials = ref(navbar.data.socials);
 		const buttons = ref(navbar.data.buttons);
-		return { items, socials, buttons };
+		const setActive = (clickedIndex) =>
+			items.value.forEach((item, index) => {
+				if (clickedIndex === index && item.active) return;
+				else if (clickedIndex === index && !item.active) item.active = true;
+				else item.active = false;
+			});
+		return { items, socials, buttons, setActive };
 	},
 };
 </script>
 
 <style lang="scss">
 #nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 0;
+	z-index: 99;
 	.nav_right {
 		display: flex;
 		justify-content: space-between;
@@ -59,9 +75,31 @@ export default {
 		.nav_right--items {
 			ul {
 				li {
+					position: relative;
 					a {
-						padding: 10px 20px;
 						color: var(--grey);
+						padding: 10px 20px;
+					}
+					&::after {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						filter: blur(2rem);
+						background: var(--white);
+						opacity: 0;
+						transition: opacity 0.3s ease;
+					}
+					&:hover::after {
+						opacity: 0.5;
+						cursor: pointer;
+					}
+				}
+				li.active {
+					a {
+						color: var(--white);
 					}
 				}
 			}
@@ -71,6 +109,7 @@ export default {
 				li {
 					padding: 10px;
 					a {
+						color: var(--white);
 						border-radius: 50%;
 						padding: 10px;
 						width: 42px;
@@ -122,7 +161,6 @@ export default {
 		li {
 			a {
 				display: block;
-				color: var(--white);
 			}
 		}
 	}

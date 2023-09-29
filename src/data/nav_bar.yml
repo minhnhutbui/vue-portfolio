@@ -2,6 +2,7 @@ data:
   items:
     - name: Home
       href: "#"
+      active: true
     - name: Skills
       href: "#"
     - name: Projects
