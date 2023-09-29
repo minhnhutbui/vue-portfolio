@@ -1,0 +1,18 @@
+data:
+  items:
+    - name: Home
+      href: "#"
+    - name: Skills
+      href: "#"
+    - name: Projects
+      href: "#"
+  socials:
+    - name: facebook
+      icon_classes: fa-brands fa-facebook-f
+    - name: instagram
+      icon_classes: fa-brands fa-instagram
+    - name: linkedin
+      icon_classes: fa-brands fa-linkedin-in
+  buttons:
+    - name: connect
+      text: Let's Connect
