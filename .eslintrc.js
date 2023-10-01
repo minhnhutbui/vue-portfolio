@@ -6,6 +6,7 @@ module.exports = {
         // 'plugin:vue/recommended' // Use this if you are using Vue.js 2.x.
     ],
     rules: {
-        "vue/multi-word-component-names": "off"
+        "vue/multi-word-component-names": "off",
+        "vue/html-indent": "off"
     }
 }
