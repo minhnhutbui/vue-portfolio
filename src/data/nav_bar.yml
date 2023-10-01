@@ -7,6 +7,8 @@ data:
       href: "#"
     - name: Projects
       href: "#"
+    - name: Contact
+      href: "#"
   socials:
     - name: facebook
       icon_classes: fa-brands fa-facebook-f
@@ -14,6 +16,3 @@ data:
       icon_classes: fa-brands fa-instagram
     - name: linkedin
       icon_classes: fa-brands fa-linkedin-in
-  buttons:
-    - name: connect
-      text: Let's Connect

@@ -30,6 +30,9 @@
 }
 
 html {
+	font-size: 18px;
+	line-height: 160%;
+	letter-spacing: 1px;
 	scroll-behavior: smooth;
 	scroll-padding-top: 75px;
 }
@@ -38,9 +41,9 @@ body {
 	font-weight: 400;
 	overflow-x: hidden;
 	position: relative;
-	background-color: var(--black) !important;
-	color: var(--white) !important;
-	font-family: "Centra", sans-serif !important;
+	background-color: var(--black);
+	color: var(--grey);
+	font-family: "Centra", sans-serif;
 }
 
 h1,
@@ -61,7 +64,6 @@ button,
 ul {
 	margin: 0;
 	padding: 0;
-	line-height: normal;
 	text-decoration: none;
 }
 
@@ -92,12 +94,4 @@ input:focus,
 textarea:focus,
 select:focus {
 	outline: none;
-}
-
-/* NAV BAR CSS */
-
-.nav_right--items,
-.nav_right--socials,
-.nav_right--button {
-	font-size: 18px;
 }
