@@ -36,21 +36,18 @@ export default {
 <style lang="scss">
 #skills {
 	.content {
-		.content_description {
-			text-align: center;
-			.item {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				margin-bottom: 100px;
-				padding: 0 50px;
-				img {
-					width: 25%;
-					aspect-ratio: 1;
-				}
-				span {
-					padding: 20px 0;
-				}
+		.item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 100px;
+			padding: 0 50px;
+			img {
+				width: 25%;
+				aspect-ratio: 1;
+			}
+			span {
+				padding: 20px 0;
 			}
 		}
 	}

@@ -13,7 +13,7 @@
 							:class="item.active ? 'active' : ''"
 							@click="setActive(index)"
 						>
-							<a href="#">{{ item.name }}</a>
+							<router-link :to="item.to">{{ item.name }}</router-link>
 						</li>
 					</ul>
 				</div>
@@ -91,22 +91,22 @@ export default {
 						a {
 							color: var(--grey);
 							padding: 10px 20px;
-						}
-						&::after {
-							content: "";
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							filter: blur(2rem);
-							background: var(--white);
-							opacity: 0;
-							transition: opacity 0.3s ease;
-						}
-						&:hover::after {
-							opacity: 0.5;
-							cursor: pointer;
+							&::after {
+								content: "";
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								filter: blur(2rem);
+								background: var(--white);
+								opacity: 0;
+								transition: opacity 0.3s ease;
+							}
+							&:hover::after {
+								opacity: 0.5;
+								cursor: pointer;
+							}
 						}
 					}
 					li.active {

@@ -1,14 +1,14 @@
 data:
   items:
     - name: Home
-      href: "#"
+      to: "/"
       active: true
     - name: Skills
-      href: "#"
+      to: "/skills"
     - name: Projects
-      href: "#"
+      to: "/projects"
     - name: Contact
-      href: "#"
+      to: "/contact"
   socials:
     - name: facebook
       icon_classes: fa-brands fa-facebook-f

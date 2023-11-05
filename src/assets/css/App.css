@@ -61,11 +61,13 @@ h6 {
 .header {
 	font-size: 45px;
 	margin: 20px 0;
+	text-align: center;
 }
 
 .description {
 	display: block;
 	margin: 0 0 40px 0;
+	text-align: center;
 }
 
 .content_header,
