@@ -55,6 +55,22 @@ h6 {
 	margin: 0;
 	padding: 0;
 	line-height: normal;
+	color: var(--white);
+}
+
+.header {
+	font-size: 45px;
+	margin: 20px 0;
+}
+
+.description {
+	display: block;
+	margin: 0 0 40px 0;
+}
+
+.content_header,
+.content_description {
+	justify-content: center;
 }
 
 p,

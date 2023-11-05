@@ -1,0 +1,23 @@
+data:
+  header: Skills
+  description: >
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+  items:
+    - name: "HTML"
+      src: "html.png"
+      description: Proficient in creating the structure and content of web pages, ensuring semantic and accessible code.
+    - name: "CSS"
+      src: "css3.png"
+      description: Skilled in styling and layout to enhance the visual appeal and user experience of websites.
+    - name: "Javascript"
+      src: "javascript.png"
+      description: Experienced in using JavaScript to add interactivity, validate forms, and enhance user interfaces.
+    - name: "Typescript"
+      src: "typescript.png"
+      description: Proficient in TypeScript, a statically typed superset of JavaScript, which enhances code quality and maintainability through type checking and interfaces.
+    - name: "VueJS"
+      src: "vue.png"
+      description: Highly skilled in Vue.js, a progressive JavaScript framework, for building dynamic and responsive user interfaces and single-page applications.
+    - name: "Headless CMS"
+      src: "directus.png"
+      description: Experienced in working with Directus CMS platforms, allowing for efficient content creation, management, and customization on websites.
