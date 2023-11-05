@@ -27,7 +27,6 @@ export default {
 		const header = ref(skills.data.header);
 		const description = ref(skills.data.description);
 		const items = ref(skills.data.items);
-		console.log(items.value);
 		return { header, description, items, modules: [Navigation] };
 	},
 };

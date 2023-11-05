@@ -7,12 +7,7 @@
 			<div class="nav_right">
 				<div class="nav_right--items">
 					<ul>
-						<li
-							v-for="(item, index) in items"
-							:key="item.name"
-							:class="item.active ? 'active' : ''"
-							@click="setActive(index)"
-						>
+						<li v-for="item in items" :key="item.name">
 							<router-link :to="item.to">{{ item.name }}</router-link>
 						</li>
 					</ul>
@@ -41,13 +36,6 @@ export default {
 		const socials = ref(navbar.data.socials);
 		const navBar = ref(null);
 
-		const setActive = (clickedIndex) =>
-			items.value.forEach((item, index) => {
-				if (clickedIndex === index && item.active) return;
-				else if (clickedIndex === index && !item.active) item.active = true;
-				else item.active = false;
-			});
-
 		onMounted(() => {
 			window.addEventListener("scroll", () => {
 				let curr = window.pageYOffset;
@@ -59,7 +47,7 @@ export default {
 				}
 			});
 		});
-		return { items, socials, navBar, setActive };
+		return { items, socials, navBar };
 	},
 };
 </script>
@@ -107,11 +95,9 @@ export default {
 								opacity: 0.5;
 								cursor: pointer;
 							}
-						}
-					}
-					li.active {
-						a {
-							color: var(--white);
+							&.router-link-active {
+								color: var(--white);
+							}
 						}
 					}
 				}
