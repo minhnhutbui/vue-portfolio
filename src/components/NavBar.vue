@@ -121,20 +121,6 @@ export default {
 								color: #fff;
 							}
 						}
-						a:has(.fa-facebook-f) {
-							background: linear-gradient(#2599fe, #2a64dd);
-						}
-						a:has(.fa-instagram) {
-							background: linear-gradient(
-								120deg,
-								#731dfc 0,
-								#f726cb 40%,
-								#f9904c 60%
-							);
-						}
-						a:has(.fa-linkedin-in) {
-							background: #1650b6;
-						}
 					}
 				}
 			}

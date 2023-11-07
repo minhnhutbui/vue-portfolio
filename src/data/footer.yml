@@ -1,0 +1,22 @@
+data:
+  items:
+    - id: 1
+      text: © 2023 by Minh Bui.
+    - id: 2
+      text: Powered and secured by Minh Bui.
+  contacts:
+    - id: 1
+      action: Call
+      detail: 0426 429 113
+    - id: 2
+      action: Write
+      detail: rinrip225@gmail.com
+    - id: 3
+      action: Follow
+      details:
+        - name: facebook
+          icon_classes: fa-brands fa-facebook-f
+        - name: instagram
+          icon_classes: fa-brands fa-instagram
+        - name: linkedin
+          icon_classes: fa-brands fa-linkedin-in
