@@ -20,7 +20,7 @@
 				</div>
 			</div>
 			<div class="banner_right l-4">
-				<img src="../assets/img/header-img.svg" alt="" />
+				<img src="../assets/img/header-img.png" alt="" />
 			</div>
 		</div>
 	</div>
@@ -55,6 +55,7 @@ export default {
 			justify-content: space-evenly;
 			p {
 				display: block;
+				animation: 1s ease-out 0s 1 slideInFromBottom;
 				&:first-child {
 					color: var(--white);
 					font-size: 24px;
@@ -67,6 +68,16 @@ export default {
 				color: var(--white);
 				display: flex;
 				flex-wrap: nowrap;
+				#typewriter {
+					animation: 1s linear slideInFromBottom;
+				}
+			}
+		}
+		.banner_right {
+			-webkit-transform: scaleX(-1);
+			transform: scaleX(-1);
+			img {
+				animation: float 3.5s ease-in-out infinite;
 			}
 		}
 	}

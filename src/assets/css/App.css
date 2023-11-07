@@ -35,6 +35,7 @@ html {
 	letter-spacing: 1px;
 	scroll-behavior: smooth;
 	scroll-padding-top: 75px;
+	scrollbar-width: none;
 }
 
 body {
@@ -44,6 +45,11 @@ body {
 	background-color: var(--black);
 	color: var(--grey);
 	font-family: "Centra", sans-serif;
+	-ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
 }
 
 h1,
@@ -62,17 +68,6 @@ h6 {
 	font-size: 45px;
 	margin: 20px 0;
 	text-align: center;
-}
-
-.description {
-	display: block;
-	margin: 0 0 40px 0;
-	text-align: center;
-}
-
-.content_header,
-.content_description {
-	justify-content: center;
 }
 
 p,
@@ -112,4 +107,87 @@ input:focus,
 textarea:focus,
 select:focus {
 	outline: none;
+}
+
+/* For specific classes */
+
+#skills,
+#projects {
+	position: relative;
+	.content {
+		position: absolute;
+		top: 100px;
+		left: 0;
+		right: 0;
+	}
+}
+
+.header,
+.description {
+	animation: 1s ease-out appear;
+}
+
+.description {
+	display: block;
+	margin: 0 0 40px 0;
+	text-align: center;
+}
+
+.content_header,
+.content_description {
+	justify-content: center;
+}
+
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-2%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(2%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromBottom {
+	0% {
+		transform: translateY(20%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-20%);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }

@@ -7,7 +7,7 @@
 			<div class="content_description row">
 				<p class="col l-6 description">{{ description }}</p>
 			</div>
-			<div class="content_description row">
+			<div class="row">
 				<div class="col l-4 item" v-for="item in items" :key="item.name">
 					<img :src="require(`../assets/img/${item.src}`)" alt="image" />
 					<span>{{ item.name }}</span>
@@ -41,6 +41,10 @@ export default {
 			align-items: center;
 			margin-bottom: 100px;
 			padding: 0 50px;
+			animation: 1s ease-out 0s 1 slideInFromLeft;
+			p {
+				text-align: center;
+			}
 			img {
 				width: 25%;
 				aspect-ratio: 1;
