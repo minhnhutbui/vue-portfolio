@@ -6,6 +6,8 @@ data:
       to: "/skills"
     - name: Projects
       to: "/projects"
+    - name: Resume
+      to: "/resume"
     - name: Contact
       to: "/contact"
   socials:
